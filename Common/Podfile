@@ -1,4 +1,8 @@
-platform :ios, '7.0'
+platform :ios, '8.0'
 target 'Common' do
-pod "AFNetworking", "~> 3.1.0"
+    pod "AFNetworking", "~> 3.1.0"
+    pod 'MJRefresh', '~> 3.1.15.3'
+    #个人集成库
+    pod 'ModelFMDB', '~> 0.0.1'
+    #
 end

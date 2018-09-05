@@ -4,49 +4,49 @@
 <array>
 	<dict>
 		<key>class</key>
-		<string>HTJSHomeViewController</string>
+		<string>HomeViewController</string>
 		<key>title</key>
 		<string>首页</string>
 		<key>image</key>
 		<string>ico_home_normal</string>
 		<key>selectedImage</key>
-		<string>ico_home_select</string>
-		<key>badgeValue</key>
-		<string>0</string>
-	</dict>
-	<dict>
-		<key>class</key>
-		<string>HTJSHomeViewController</string>
-		<key>title</key>
-		<string>详情</string>
-		<key>image</key>
 		<string>ico_home_normal</string>
-		<key>selectedImage</key>
-		<string>ico_home_select</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>
 	<dict>
 		<key>class</key>
-		<string>HTJSHomeViewController</string>
+		<string>HomeViewController</string>
 		<key>title</key>
-		<string>图片</string>
+		<string>服务</string>
 		<key>image</key>
-		<string>ico_home_normal</string>
+		<string>heart</string>
 		<key>selectedImage</key>
-		<string>ico_home_select</string>
+		<string>heart</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>
 	<dict>
 		<key>class</key>
-		<string>HTJSHomeViewController</string>
+		<string>HomeViewController</string>
+		<key>title</key>
+		<string>综合查询</string>
+		<key>image</key>
+		<string>target</string>
+		<key>selectedImage</key>
+		<string>target</string>
+		<key>badgeValue</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>class</key>
+		<string>HomeViewController</string>
 		<key>title</key>
 		<string>我的</string>
 		<key>image</key>
-		<string>ico_home_normal</string>
+		<string>mine</string>
 		<key>selectedImage</key>
-		<string>ico_home_select</string>
+		<string>mine</string>
 		<key>badgeValue</key>
 		<string>0</string>
 	</dict>

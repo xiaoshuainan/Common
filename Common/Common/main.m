@@ -3,7 +3,7 @@
 //  Common
 //
 //  Created by liyangtao on 2017/3/27.
-//  Copyright © 2017年 河南航天金穗电子有限公司. All rights reserved.
+//  Copyright © 2017年 . All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

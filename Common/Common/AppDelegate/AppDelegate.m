@@ -3,11 +3,10 @@
 //  Common
 //
 //  Created by liyangtao on 2017/3/27.
-//  Copyright © 2017年 河南航天金穗电子有限公司. All rights reserved.
+//  Copyright © 2017年 . All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "HTJSBaseTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,9 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    _baseTabBar = [HTJSBaseTabBarViewController new];
-    [_baseTabBar setBadgeValue:@"2" index:0];
-    [_baseTabBar showBadgeWithIndex:3];
+    _baseTabBar = [BaseTabBarViewController new];
     self.window.rootViewController = _baseTabBar;
     
     [self.window makeKeyAndVisible];

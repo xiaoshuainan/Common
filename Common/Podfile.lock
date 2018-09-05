@@ -14,13 +14,29 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - FMDB/standard (2.7.2)
+  - MJRefresh (3.1.15.3)
+  - ModelFMDB (0.0.1):
+    - FMDB/standard (>= 2.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - MJRefresh (~> 3.1.15.3)
+  - ModelFMDB (~> 0.0.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - FMDB
+    - MJRefresh
+    - ModelFMDB
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  ModelFMDB: b4d53d35e00e6855f84c90505c696f4983a9eaf2
 
-PODFILE CHECKSUM: e28d3da5c85737f1699ca48b17afb5986758f094
+PODFILE CHECKSUM: 430ca7fbd869fa0193a51a9957bcb1198b1bb204
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.2
