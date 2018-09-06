@@ -16,7 +16,7 @@
 	</dict>
 	<dict>
 		<key>class</key>
-		<string>HomeViewController</string>
+		<string>CategoryVC</string>
 		<key>title</key>
 		<string>服务</string>
 		<key>image</key>

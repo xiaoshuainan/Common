@@ -11,7 +11,7 @@
 @interface BaseTabBarViewController : UITabBarController
 
 /**
- 设置指定tabar角标
+ 设置指定tabar角标(带数值小红点)
 
  @param badgeValue 小红点的值
  @param index tabBar下标
@@ -19,14 +19,14 @@
 - (void)setBadgeValue:(NSString *)badgeValue index:(NSInteger)index;
 
 /**
- 显示tabBar角标
+ 显示tabBar角标(无数值小红点)
 
  @param index tabBar下标
  */
 - (void)showBadgeWithIndex:(NSInteger)index;
 
 /**
- 显示tabBar角标
+ 隐藏tabBar角标(无数值小红点)
 
  @param index tabBar下标
  */

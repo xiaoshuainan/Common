@@ -39,5 +39,6 @@ typedef enum ServerType {
 #import "NSString+Extension.h"
 #import "UITabBar+Badge.h"
 #import "UIImage+Extension.h"
+#import "UIView+LoadNib.h"
 
 #endif

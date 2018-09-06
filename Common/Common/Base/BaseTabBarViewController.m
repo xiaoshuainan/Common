@@ -128,7 +128,8 @@
         return;
     }
     UIViewController *vc = base.viewControllers[0];
-    vc.tabBarItem.badgeValue = badgeValue.intValue > 0 ? badgeValue : nil;
+    vc.tabBarItem.badgeValue = badgeValue;
+//    vc.tabBarItem.badgeValue = badgeValue.intValue > 0 ? badgeValue : nil;
 }
 
 /**
@@ -141,7 +142,7 @@
 }
 
 /**
- 显示tabBar角标
+ 隐藏tabBar角标
  
  @param index tabBar下标
  */

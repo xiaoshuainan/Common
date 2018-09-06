@@ -2,6 +2,7 @@ platform :ios, '8.0'
 target 'Common' do
     pod "AFNetworking", "~> 3.1.0"
     pod 'MJRefresh', '~> 3.1.15.3'
+    pod 'HMSegmentedControl', '~> 1.5.5'
     #个人集成库
     pod 'ModelFMDB', '~> 0.0.1'
     #

@@ -26,7 +26,7 @@
     NSInteger tabbarItemNums = dele.baseTabBar.viewControllers.count;
     
     //确定小红点的位置
-    float percentX = (index +0.6) / tabbarItemNums;
+    float percentX = (index + 0.65) / tabbarItemNums;
     CGFloat x = ceilf(percentX * tabFrame.size.width);
     CGFloat y = ceilf(0.1 * tabFrame.size.height);
     badgeView.frame = CGRectMake(x, y, 10, 10);
@@ -39,7 +39,6 @@
 }
 
 - (void)removeBadgeOnItemIndex:(NSInteger)index{
-    
     //按照tag值进行移除
     for (UIView *subView in self.subviews) {
         
