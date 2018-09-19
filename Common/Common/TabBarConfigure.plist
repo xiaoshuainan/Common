@@ -16,7 +16,7 @@
 	</dict>
 	<dict>
 		<key>class</key>
-		<string>CategoryVC</string>
+		<string>MenuViewController</string>
 		<key>title</key>
 		<string>服务</string>
 		<key>image</key>
@@ -28,7 +28,7 @@
 	</dict>
 	<dict>
 		<key>class</key>
-		<string>HomeViewController</string>
+		<string>ComprehensiveViewController</string>
 		<key>title</key>
 		<string>综合查询</string>
 		<key>image</key>
@@ -40,7 +40,7 @@
 	</dict>
 	<dict>
 		<key>class</key>
-		<string>HomeViewController</string>
+		<string>ComprehensiveViewController</string>
 		<key>title</key>
 		<string>我的</string>
 		<key>image</key>
