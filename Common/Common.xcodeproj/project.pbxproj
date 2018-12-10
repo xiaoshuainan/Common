@@ -202,17 +202,17 @@
 		1412080B215259F0009E213E /* category */ = {
 			isa = PBXGroup;
 			children = (
-				1412080C215259F0009E213E /* CategoryHomeShowAppCell.xib */,
-				1412080D215259F0009E213E /* CollectionReusableHeaderView.m */,
-				1412080E215259F0009E213E /* CollectionReusableFooterView.h */,
 				1412080F215259F0009E213E /* CategoryModel.h */,
-				14120810215259F0009E213E /* CategoryHomeShowAppCell.h */,
-				14120811215259F0009E213E /* CollectionReusableFooterView.xib */,
-				14120812215259F0009E213E /* CollectionReusableHeaderView.h */,
 				14120813215259F0009E213E /* CategoryModel.m */,
-				14120814215259F0009E213E /* CollectionReusableFooterView.m */,
-				14120815215259F0009E213E /* CollectionReusableHeaderView.xib */,
+				14120810215259F0009E213E /* CategoryHomeShowAppCell.h */,
 				14120816215259F0009E213E /* CategoryHomeShowAppCell.m */,
+				1412080C215259F0009E213E /* CategoryHomeShowAppCell.xib */,
+				14120812215259F0009E213E /* CollectionReusableHeaderView.h */,
+				1412080D215259F0009E213E /* CollectionReusableHeaderView.m */,
+				14120815215259F0009E213E /* CollectionReusableHeaderView.xib */,
+				1412080E215259F0009E213E /* CollectionReusableFooterView.h */,
+				14120814215259F0009E213E /* CollectionReusableFooterView.m */,
+				14120811215259F0009E213E /* CollectionReusableFooterView.xib */,
 			);
 			path = category;
 			sourceTree = "<group>";

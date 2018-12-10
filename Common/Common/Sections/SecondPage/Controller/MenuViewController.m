@@ -8,7 +8,7 @@
 
 #import "MenuViewController.h"
 #import "CollectionReusableHeaderView.h"
-//#import "CollectionReusableFooterView.h"
+#import "CollectionReusableFooterView.h"
 #import "CategoryHomeShowAppCell.h"
 #import "CategoryModel.h"
 //自定义SegmentedControl
@@ -86,9 +86,10 @@ static NSString *const footerId = @"CollectionReusableFooterView";
         _segmentedControl.segmentEdgeInset = UIEdgeInsetsMake(0, 10, 0, 10);
         _segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleFullWidthStripe;
         _segmentedControl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
+        _segmentedControl.backgroundColor = kUIToneBackgroundColor;
         //选中状态颜色
         UIColor *selectedColor = [UIColor orangeColor];
-        UIColor *unselectedColor = [UIColor blackColor];
+        UIColor *unselectedColor = [UIColor whiteColor];
         [_segmentedControl setTitleFormatter:^NSAttributedString *(HMSegmentedControl *segmentedControl, NSString *title, NSUInteger index, BOOL selected) {
             if (selected) {
                 //选中状态下,字体颜色与大小
@@ -104,7 +105,7 @@ static NSString *const footerId = @"CollectionReusableFooterView";
         //设置segmentedControl底部平移条
         _segmentedControl.selectionIndicatorColor = selectedColor;
         [_segmentedControl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
-        [self.view addSubview:_segmentedControl];
+        self.navigationItem.titleView = _segmentedControl;
     }
     return _segmentedControl;
 }
@@ -149,15 +150,16 @@ static NSString *const footerId = @"CollectionReusableFooterView";
  初始化视图
  */
 - (void)initUI {
-    self.appCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 50, kScreenWidth, kScreenHeight - navViewH - tabBarH - segmentControlH) collectionViewLayout:self.layout];
+    self.appCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - navViewH - tabBarH) collectionViewLayout:self.layout];
     self.appCollectionView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:self.appCollectionView];
     self.appCollectionView.backgroundColor = [UIColor whiteColor];
     self.appCollectionView.delegate = self;
     self.appCollectionView.dataSource = self;
+    
     [self.appCollectionView  registerNib:[UINib nibWithNibName:NSStringFromClass([CategoryHomeShowAppCell class]) bundle:nil] forCellWithReuseIdentifier:cellId];
     [self.appCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CollectionReusableHeaderView class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerId];
-    //    [self.appCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CollectionReusableFooterView class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerId];
+        [self.appCollectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CollectionReusableFooterView class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerId];
     
 }
 
@@ -232,17 +234,17 @@ static NSString *const footerId = @"CollectionReusableFooterView";
         CollectionReusableHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerId forIndexPath:indexPath];
         CategoryModel *model = _homeDataArray[indexPath.section];
         headerView.headerTitleLabel.text = model.title;
-        if (indexPath.section == 0) {
-            headerView.intervalViews.hidden = NO;
-        }else{
-            headerView.intervalViews.hidden = YES;
-        }
+        headerView.intervalViews.hidden = YES;
+//        if (indexPath.section == 0) {
+//            headerView.intervalViews.hidden = NO;
+//        }else{
+//            headerView.intervalViews.hidden = YES;
+//        }
         
         return headerView;
     } else {
-        return nil;
-        //        CollectionReusableFooterView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:footerId forIndexPath:indexPath];
-        //        return footerView;
+        CollectionReusableFooterView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:footerId forIndexPath:indexPath];
+        return footerView;
     }
 }
 
@@ -250,9 +252,12 @@ static NSString *const footerId = @"CollectionReusableFooterView";
     return CGSizeMake(kScreenWidth, 40);
 }
 
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
-//    return CGSizeMake(kScreenWidth, 0.5);
-//}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    if (section < _homeDataArray.count && section == (_homeDataArray.count - 1)) {
+        return CGSizeMake(kScreenWidth, 350);
+    }
+    return CGSizeMake(kScreenWidth, 0);
+}
 
 /*
 #pragma mark - Navigation
